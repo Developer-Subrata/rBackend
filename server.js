@@ -16,7 +16,7 @@ app.use(bodyParser.json());// Use body-parser to parse incoming JSON requests
 app.use(cors());    // Enable CORS to allow requests from different origins
 
 // Connect to the MongoDB database
-mongoose.connect('mongodb://localhost:27017/MY_restaurant_DATA', {
+mongoose.connect('mongodb+srv://subrataind2:3xvQ2FzIzU9Mpt5n@subrata.227ai.mongodb.net/?retryWrites=true&w=majority&appName=subratas', {
   useNewUrlParser: true, // Use the new URL parser to avoid deprecation warnings
   useUnifiedTopology: true, // Use the new topology engine to avoid deprecation warnings
 })
