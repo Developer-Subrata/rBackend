@@ -23,6 +23,15 @@ mongoose.connect('mongodb+srv://subrataind2:3xvQ2FzIzU9Mpt5n@subrata.227ai.mongo
 .then(() => console.log('MongoDB connected')) // Log success message if connected
 .catch(err => console.log(err)); // Log error if connection fails
 
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
+
+
 // Define routes for handling different API endpoints
 app.use('/signup', signupRoute); // Route for user signup
 app.use('/login', loginRoute); // Route for user login
