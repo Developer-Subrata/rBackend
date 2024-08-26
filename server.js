@@ -25,10 +25,10 @@ mongoose.connect('mongodb+srv://subrataind2:3xvQ2FzIzU9Mpt5n@subrata.227ai.mongo
 
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, '../rFrontend/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../rFrontend/build', 'index.html'));
 });
 
 
